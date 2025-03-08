@@ -24,7 +24,7 @@ Here is the attached document -
 ## Video link
 ⟹ Provide a video highlighing your Hackathon module submission and provide a link to the video. You can use any video hosting, file share or even upload the video to this repository. _Just remember to update the link below_
 
-⟹ [Replace this Video link](#video-link)
+⟹ [SitecoreStrikerHackathonVideo](https://www.youtube.com/watch?v=KgDBDZd3tWw)
 
 ## Pre-requisites and Dependencies
 
@@ -51,4 +51,4 @@ Here is the attached document -
 8. Now go back to your VS code and run the following command it should push the news articles including AI analysis results in the XMC instance in Home/News folder. 
     python authoring.py
 
-Note – Please refer to the document attached for the detailed steps. Please use headset for better video hearing quality. Thank you
+Note – Please refer to the document attached for the detailed steps. Please use headset for better audio video quality. Thank you
