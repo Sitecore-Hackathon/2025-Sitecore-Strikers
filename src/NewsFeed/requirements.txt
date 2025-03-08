@@ -1,0 +1,7 @@
+feedparser
+pymongo
+transformers
+sentence-transformers
+scikit-learn
+aiohttp
+gradio
