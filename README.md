@@ -51,4 +51,4 @@ Here is the attached document -
 8. Now go back to your VS code and run the following command it should push the news articles including AI analysis results in the XMC instance in Home/News folder. 
     python authoring.py
 
-Note – Please refer to the document attached for the detailed steps.
+Note – Please refer to the document attached for the detailed steps. Please use headset for better video hearing quality. Thank you
