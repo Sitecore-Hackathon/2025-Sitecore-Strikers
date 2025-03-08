@@ -9,7 +9,7 @@
 
 ## Description
 ⟹ Write a clear description of your hackathon entry.  
-
+https://github.com/Sitecore-Hackathon/2025-Sitecore-Strikers/blob/cf18cdfe4e1472907840da75775b20b12b8bba6a/docs/Automating%20News%20Feed%20Integration%20into%20Sitecore%20XM%20Cloud%20with%20AI.docx 
   - Module Purpose
   - What problem was solved (if any)
     - How does this module solve it
