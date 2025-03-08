@@ -8,13 +8,18 @@
 ⟹  Sitecore Authoring API using AI Integration.
 
 ## Description
-⟹ Write a clear description of your hackathon entry.  
+ 
+Problem Statement:
+In today’s fast-paced digital world, businesses must stay updated with real-time news to make informed decisions. However, challenges such as news authenticity, relevant categorization, and sentiment analysis make it difficult to derive meaningful insights from vast amounts of data.
 
-  - Module Purpose
-  - What problem was solved (if any)
-    - How does this module solve it
+    •	Misinformation & Fake News: With the rise of misinformation, businesses risk making decisions based on unreliable sources.
+    •	Information Overload: Manually filtering and categorizing news relevant to the business is time-consuming and inefficient.
+    •	Understanding Sentiment: Businesses need to gauge the sentiment of news articles (positive, negative, or neutral) to assess potential impacts.
 
-_You can alternately paste a [ModuleUseCase](docs/Automating-News-Feed-Integration-into-Sitecore-XMC-with-AI.docx) to a document within this repo containing the description._
+This solution ensures businesses receive only relevant, credible, and sentiment-aware news, eliminating the manual effort required for news filtering and analysis.
+
+Here is the attached document -
+[ModuleUseCase](docs/Automating-News-Feed-Integration-into-Sitecore-XMC-with-AI.docx)
 
 ## Video link
 ⟹ Provide a video highlighing your Hackathon module submission and provide a link to the video. You can use any video hosting, file share or even upload the video to this repository. _Just remember to update the link below_
@@ -23,42 +28,27 @@ _You can alternately paste a [ModuleUseCase](docs/Automating-News-Feed-Integrati
 
 ## Pre-requisites and Dependencies
 
-⟹ Does your module rely on other Sitecore modules or frameworks?
+    > An active XM Cloud instance with the Authoring API enabled. 
+    > A Client ID and Client Secret readily available to generate an access token for using the Authoring API's mutation queries. 
+    > The GraphQL Authoring API URL should be accessible, e.g., https://YOUR-XMC-DOMAIN/sitecore/api/authoring/graphql/v1 . 
+    > A News API service for proof-of-concept purposes. We have used this API with an API key: https://newsapi.org/v2/top-headlines?country=us&apiKey=095392c11b2945928e1d34da0db48c10 . 
+    > An active Azure subscription to create and host the Azure Function for executing the given Python script. 
+    > Python should be installed on your local machine. Testing was conducted on version 3.12.6.
 
-- List any dependencies
-- Or other modules that must be installed
-- Or services that must be enabled/configured
-
-_Remove this subsection if your entry does not have any prerequisites other than Sitecore_
 
 ## Installation instructions
-⟹ Write a short clear step-wise instruction on how to install your module.  
+1. Clone the repository in your local environment from GitHub.
+2. Open the repository in VS Code and if needed install the Python extension. 
+3. Open the terminal and select Git Bash and navigate to the directory “2025-Sitecore-Strikers/src/newsfeed”.
+4. Run the following command:  pip install -r requirements.txt
+5. Update the following variables in the authoring.py file.
+    GRAPHQL_Authoring_URL
+    ACCESS_TOKEN 
+6. To generate the ACCESS_TOKEN run the below command in the command prompt using your Client ID and Client Secret.
+    cmd /c curl --request POST --url "https://auth.sitecorecloud.io/oauth/token" --header "content-type: application/x-www-form-urlencoded" --data audience=https://api.sitecorecloud.io --data grant_type=client_credentials --data client_id={{Client ID}} --data client_secret={{Client Secret}}
+7. Now login to your XMC instance and install the following Sitecore package.
+    [SitecoreHackathonPackage](src/NewsFeed/SitecoreHackathonPackage2025.zip)
+8. Now go back to your VS code and run the following command it should push the news articles including AI analysis results in the XMC instance in Home/News folder. 
+    python authoring.py
 
-> _A simple well-described installation process is required to win the Hackathon._  
-> Feel free to use any of the following tools/formats as part of the installation:
-> - Sitecore Package files
-> - Docker image builds
-> - Sitecore CLI
-> - msbuild
-> - npm / yarn
-> 
-> _Do not use_
-> - TDS
-> - Unicorn
- 
-for example:
-
-1. Use the Sitecore Installation wizard to install the [package](#link-to-package)
-2. ...
-3. profit
-
-### Configuration
-⟹ If there are any custom configuration that has to be set manually then remember to add all details here.
-
-_Remove this subsection if your entry does not require any configuration that is not fully covered in the installation instructions already_
-
-## Usage instructions
-⟹ Provide documentation about your module, how do the users use your module, where are things located, what do the icons mean, are there any secret shortcuts etc.
-
-Include screenshots where necessary. You can add images to the `./images` folder and then link to them from your documentation:
-
+Note – Please refer to the document attached for the detailed steps.
