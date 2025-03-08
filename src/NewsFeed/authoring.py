@@ -13,7 +13,7 @@ templateId = "{B4E6C442-2F61-4926-9E5A-A4E5150C5EB6}"
 parentId = "{72171220-15C0-4901-9146-759FA5564008}"
 # XM Cloud GraphQL API details
 GRAPHQL_Authoring_URL = ""   # Replace with Authoring URL of XM Cloud Instance
-API_KEY = ""  # Replace with your actual API key
+ACCESS_TOKEN = ""  # Replace with your actual access token
 
 #AI Models
 model_name = "jy46604790/Fake-News-Bert-Detect"
@@ -157,7 +157,7 @@ mutation($input: CreateItemInput!) {
     }
 }
 """
-    headers = {"Authorization": f"Bearer {API_KEY}",
+    headers = {"Authorization": f"Bearer {ACCESS_TOKEN}",
                "Content-Type": "application/json"}
 
     async with session.post(GRAPHQL_Authoring_URL, json={"query": MUTATION_QUERY, "variables": {"input": inputParam}}, headers=headers) as response:
