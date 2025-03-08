@@ -12,7 +12,7 @@ from datetime import datetime, timezone
 templateId = "{B4E6C442-2F61-4926-9E5A-A4E5150C5EB6}"
 parentId = "{72171220-15C0-4901-9146-759FA5564008}"
 # XM Cloud GraphQL API details
-GRAPHQL_URL = ""
+GRAPHQL_Authoring_URL = ""   # Replace with Authoring URL of XM Cloud Instance
 API_KEY = ""  # Replace with your actual API key
 
 #AI Models
@@ -160,7 +160,7 @@ mutation($input: CreateItemInput!) {
     headers = {"Authorization": f"Bearer {API_KEY}",
                "Content-Type": "application/json"}
 
-    async with session.post(GRAPHQL_URL, json={"query": MUTATION_QUERY, "variables": {"input": inputParam}}, headers=headers) as response:
+    async with session.post(GRAPHQL_Authoring_URL, json={"query": MUTATION_QUERY, "variables": {"input": inputParam}}, headers=headers) as response:
         result = await response.json()
     if response.status == 200:
         print(f"✅ Created: {result}")
