@@ -5,7 +5,7 @@
 ⟹ Sitecore Strikers
 
 ## Category
-⟹  Sitecore Authoring API using AI Integration.
+⟹  Sitecore Authoring API with AI Integration.
 
 ## Description
  
